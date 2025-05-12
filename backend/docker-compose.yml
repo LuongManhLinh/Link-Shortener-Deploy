@@ -1,12 +1,11 @@
 services:
   app:
-    build: .
-    container_name: app
+    image: lsbe:latest
     ports:
-      - "8080:8080"
+      - "8080:8080" 
     environment:
-      MYSQL_URL=${MYSQL_URL}
-      MYSQL_USER=${MYSQL_USER}
-      MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      MYSQL_DATABASE=${MYSQL_DATABASE}
+      MYSQL_URL: ${MYSQL_URL}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
     restart: unless-stopped

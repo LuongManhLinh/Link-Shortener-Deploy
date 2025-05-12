@@ -20,7 +20,7 @@ COPY src ./src
 RUN mvn package -DskipTests
 
 # Expose the application port 8080
-EXPOSE 8080
+EXPOSE 80
 
 # Specify the command to run the application
 CMD ["java", "-jar", "target/linkshortener-0.0.1-SNAPSHOT.jar", "--cache.enabled=true"]
